@@ -25,3 +25,12 @@ mainClassName = 'name.hersen.spark.onpace.AppKt'
 task stage {
     dependsOn installDist
 }
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'name.hersen.spark.onpace.AppKt'
+        )
+    }
+}
