@@ -21,7 +21,7 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 apply plugin: 'application'
-mainClassName = 'com.example.kotlinserver.AppKt'
+mainClassName = 'name.hersen.spark.onpace.AppKt'
 task stage {
     dependsOn installDist
 }
